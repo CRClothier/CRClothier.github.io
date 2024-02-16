@@ -9,6 +9,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.logo {
+  color: white;;
+}
+
 body {
   background-color: rgb(255, 255, 255);
   font-family: "Roboto", "Helvetica Neue", sans-serif;
@@ -28,13 +32,7 @@ footer {
 h1,
 .declaration {
   margin: 0;
-
-  font-family: "GeneralSans 700";
   font-size: 3.5rem;
-}
-
-h1:hover {
-  color: rgb(143, 45, 86);
 }
 
 h2 {
@@ -78,6 +76,10 @@ a > img {
 /* HEADER AND NAV STYLING */
 header {
   padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 nav {
@@ -199,7 +201,7 @@ nav img {
   padding: 2.5rem 0;
   width: 80%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .social-links img {
@@ -212,6 +214,112 @@ nav img {
   transition: transform 0.4s ease-in-out;
 }
 
+/* Hero Section */
+main {
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(33, 131, 128);
+}
+
+
+.name-highlight {
+  background: -webkit-linear-gradient(
+    top right,
+    rgba(216, 17, 89),
+    rgba(143, 45, 86)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.declaration {
+  margin: 0;
+  font-size: 3.2rem;
+  line-height: 1.4;
+}
+
+.cta-box {
+  margin-top: 4rem;
+}
+
+.cta {
+  display: inline-block;
+  width: fit-content;
+  margin: 0.5rem 1.8rem;
+  margin-left: 0;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background-color: white;
+  border: solid 3px rgb(216, 17, 89);
+  text-align: center;
+  text-decoration: none;
+  color: rgb(216, 17, 89);
+}
+
+.cta1 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.cta:hover {
+  background-color: #FFBC42;
+  transition: all 0.4s ease-in-out;
+}
+
+.main-social-links {
+  display: none;
+}
+
+/* Speech Bubble */
+
+.speech-bubble, .speech-bubble * { box-sizing: border-box }
+
+.speech-bubble {
+  width: fit-content;
+  margin-bottom: 5rem;
+  --bbArrowSize: 1.5rem;
+  background-color: rgb(255, 188, 66);
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+  position: relative;
+  box-shadow: 4px 4px 15px rgb(210,210,210);
+  transition: transform 0.2s  ease;
+}
+
+.speech-bubble:hover {
+transform: scale(1.06);
+}
+
+.speech-bubble::before{
+  content: ''; 
+  position: absolute;
+  background-color: rgb(255, 188, 66);
+}
+
+.speech-bubble.pbottom::before,
+.speech-bubble.ptop::before{
+  height: 1.5rem;
+  width: 2rem;
+}
+
+.speech-bubble.pbottom::before{
+  top: calc(100% - 2px);
+}
+.speech-bubble.pbottom.aleft::before{
+  left: 1rem;
+  clip-path: polygon(25% 0, 100% 0, 0% 100%);
+}
+.speech-bubble.pbottom.acenter::before{
+  left: calc(50% - 1.5rem / 2);
+  clip-path: polygon(12.5% 0, 87.5% 0, 50% 100%);
+}
+.speech-bubble.pbottom.aright::before{
+  right: 1rem;
+  clip-path: polygon(0 0, 75% 0, 100% 100%);
+}
 
 /** Responsive Design **/
 
@@ -242,8 +350,12 @@ nav img {
     height: auto;
     justify-self: flex-end;
     flex-direction: row;
-    gap: 1rem;
+    gap: 3rem;
     background: none;
+  }
+
+  .nav-social-links {
+    display: none;
   }
 
   .hamburger {
@@ -259,6 +371,10 @@ nav img {
 
   main section {
     width: 47rem;
+  }
+
+  .speech-bubble {
+    margin-bottom: 2rem;
   }
 
   h1,
@@ -556,7 +672,7 @@ nav img {
 
   h1,
   .declaration {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   .project {
