@@ -75,11 +75,6 @@ a > img {
   width: 3rem;
 }
 
-a > img:hover {
-  transform: scale(1.05);
-  transition: all 0.4s ease-in-out;
-}
-
 /* HEADER AND NAV STYLING */
 header {
   padding: 1rem 2rem;
@@ -102,16 +97,18 @@ nav img {
   top: -2rem;
   right: -200vh;
   height: 100vh;
-  width: 75vw;
+  width: 60vw;
+  gap: 5vh;
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
   background: rgb(115, 210, 222);
   transition: all 0.5s ease-in-out;
   z-index: 2;
+  font-size: 2.2rem;
+  font-weight: 400;
 }
 
 .nav-menu.is-active {
@@ -211,7 +208,7 @@ nav img {
 }
 
 .social-links img:hover {
-  transform: scale(1.03);
+  transform: scale(1.14);
   transition: transform 0.4s ease-in-out;
 }
 
@@ -242,12 +239,10 @@ nav img {
 
   .nav-menu {
     position: static;
-    width: 30%;
     height: auto;
     justify-self: flex-end;
     flex-direction: row;
-    gap: 5.5rem;
-
+    gap: 1rem;
     background: none;
   }
 
