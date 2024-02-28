@@ -1,11 +1,10 @@
-# CRClothier.github.io
 <a name="readme-top"></a>
 
 <div align="center"
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Chris Clothier - Portfolio Website</b></h3>
+  <h1><b>Chris Clothier - Portfolio Website</b></h1>
 
 </div>
 
