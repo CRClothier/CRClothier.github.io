@@ -415,6 +415,15 @@ transform: scale(1.06);
   box-shadow: 10px 0 1px #8F2D56, 20px 0 1px #D81159, 30px 0 1px #FFBC42;
 }
 
+/* PROJECTS SECTION STYLING */
+
+.projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
 
 /** Responsive Design **/
 
