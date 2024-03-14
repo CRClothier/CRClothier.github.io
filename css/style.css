@@ -49,17 +49,6 @@ h3 {
   margin-bottom: 1rem;
 }
 
-.featured-projects-box h3 {
-  background: -webkit-linear-gradient(
-    90.98deg,
-    rgba(24, 185, 207, 0.9) -2.14%,
-    #6688ff 103.54%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 img {
   height: auto;
 }
@@ -75,17 +64,26 @@ a > img {
 /* HEADER AND NAV STYLING */
 
 header {
+  height: 10vh;
   padding: 1rem 2rem;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
+  transition: all 1s ease-in-out;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10000;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+nav a {
+  transition: all 1s ease-in-out;
 }
 
 nav img {
@@ -138,7 +136,6 @@ nav img {
   position: fixed;
   top: 2.3rem;
   right: 2rem;
-  background: rgb(115, 210, 222);
 }
 
 .menu-bar {
@@ -325,6 +322,7 @@ transform: scale(1.06);
 }
 
 /* ABOUT SECTION STYLING */
+
 #about {
   display: flex;
   flex-direction: column;
@@ -332,6 +330,7 @@ transform: scale(1.06);
   align-items: center;
   gap: 4rem;
   padding-bottom: 10rem;
+  padding-top: 10rem;
 }
 
 .wrapper {
@@ -414,6 +413,10 @@ transform: scale(1.06);
 }
 
 /* PROJECTS SECTION STYLING */
+
+#projects {
+  padding-top: 10vh;
+}
 
 .projects-container {
   margin-top: 50px;
@@ -535,6 +538,16 @@ transform: scale(1.06);
 
   header {
     width: 100%;
+  }
+
+  .header-scroll {
+    background-color: #218380;
+    color: #FFFFFF;
+    height: 10vh;
+  }
+
+  .header-scroll .nav-link a {
+    color: #FFFFFF;
   }
 
   nav {
